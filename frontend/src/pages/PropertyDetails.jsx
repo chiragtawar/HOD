@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import config from '../config';
 import { useParams, Link } from 'react-router-dom';
 import { MapPin, Bed, Bath, Layout, ArrowLeft, CheckCircle, Phone } from 'lucide-react';
 
@@ -8,7 +9,7 @@ const PropertyDetails = () => {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch(`/api/properties/${id}`)
+        fetch(`${config.API_BASE_URL}/api/properties/${id}`)
             .then(res => {
                 if (!res.ok) throw new Error('Not found');
                 return res.json();

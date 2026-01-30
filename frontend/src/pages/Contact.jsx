@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
+import config from '../config';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
 
 const Contact = () => {
     const [info, setInfo] = useState(null);
 
     useEffect(() => {
-        fetch('/api/public/company-info')
+        fetch(`${config.API_BASE_URL}/api/public/company-info`)
             .then(res => res.json())
             .then(data => setInfo(data))
             .catch(err => console.error(err));

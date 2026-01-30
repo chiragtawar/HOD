@@ -7,12 +7,14 @@ import PartnersSection from '../components/sections/PartnersSection';
 import AboutFounder from '../components/sections/AboutFounder';
 import CampaignCTA from '../components/sections/CampaignCTA';
 
+import config from '../config';
+
 const Home = () => {
     const [data, setData] = useState(null);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('/api/public/homepage')
+        fetch(`${config.API_BASE_URL}/api/public/homepage`)
             .then(res => res.json())
             .then(data => {
                 setData(data);

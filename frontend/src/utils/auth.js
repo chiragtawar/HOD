@@ -1,3 +1,5 @@
+import config from '../config';
+
 // Utility function to get authentication headers for admin API calls
 export const getAuthHeaders = () => {
     const auth = localStorage.getItem('auth');
@@ -13,7 +15,8 @@ export const getAuthHeaders = () => {
 // Fetch wrapper with authentication
 export const authFetch = async (url, options = {}) => {
     const headers = getAuthHeaders();
-    const response = await fetch(url, {
+    const fullUrl = url.startsWith('http') ? url : `${config.API_BASE_URL}${url}`;
+    const response = await fetch(fullUrl, {
         ...options,
         headers: {
             ...headers,
