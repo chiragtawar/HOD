@@ -11,4 +11,6 @@ public interface SectionRepository extends CrudRepository<Section, Long> {
     List<Section> findByTenantIdOrderByDisplayOrderAsc(Long tenantId);
 
     List<Section> findByTenantIdAndIsVisibleTrueOrderByDisplayOrderAsc(Long tenantId);
+
+    Section findBySectionKey(String sectionKey);
 }

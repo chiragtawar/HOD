@@ -93,6 +93,15 @@ public class DataInitializer {
                                                 "CampaignModule"));
                         }
 
+                        // 9. Rental Yield Estimator (New Section)
+                        if (sectionRepository.findBySectionKey("rental_yield_estimator") == null) {
+                                sectionRepository.save(new com.hod.realty.model.Section(null, 1L,
+                                                "rental_yield_estimator",
+                                                "Rental Yield Estimator", true, 9,
+                                                "{\"description\": \"Calculate potential rental returns on your investment. (Coming Soon)\"}",
+                                                "RentalYieldEstimator"));
+                        }
+
                         if (counterRepository.count() == 0) {
                                 counterRepository.save(
                                                 new com.hod.realty.model.Counter(null, 1L, "Happy Families", "500+",
@@ -156,28 +165,30 @@ public class DataInitializer {
                                                                 "COMMERCIAL + RESIDENTIAL MALL: New Opportunity in Faridabad"));
                         }
 
-                        partnerRepository.save(new Partner(null, 1L, "Bhumika Group",
-                                        "/favicon.svg",
-                                        "https://bhumikagroup.com", true));
-                        partnerRepository.save(new Partner(null, 1L, "Navraj",
-                                        "/favicon.svg",
-                                        "https://navraj.com", true));
-                        partnerRepository.save(
-                                        new Partner(null, 1L, "BPTP",
-                                                        "/favicon.svg",
-                                                        "https://bptp.com", true));
-                        partnerRepository.save(
-                                        new Partner(null, 1L, "Omaxe",
-                                                        "/favicon.svg",
-                                                        "https://omaxe.com", true));
-                        partnerRepository
-                                        .save(new Partner(null, 1L, "Soha",
-                                                        "/favicon.svg", "#",
-                                                        true));
-                        partnerRepository
-                                        .save(new Partner(null, 1L, "Mansha",
-                                                        "/favicon.svg", "#",
-                                                        true));
+                        if (partnerRepository.count() == 0) {
+                                partnerRepository.save(new Partner(null, 1L, "Bhumika Group",
+                                                "/favicon.svg",
+                                                "https://bhumikagroup.com", true));
+                                partnerRepository.save(new Partner(null, 1L, "Navraj",
+                                                "/favicon.svg",
+                                                "https://navraj.com", true));
+                                partnerRepository.save(
+                                                new Partner(null, 1L, "BPTP",
+                                                                "/favicon.svg",
+                                                                "https://bptp.com", true));
+                                partnerRepository.save(
+                                                new Partner(null, 1L, "Omaxe",
+                                                                "/favicon.svg",
+                                                                "https://omaxe.com", true));
+                                partnerRepository
+                                                .save(new Partner(null, 1L, "Soha",
+                                                                "/favicon.svg", "#",
+                                                                true));
+                                partnerRepository
+                                                .save(new Partner(null, 1L, "Mansha",
+                                                                "/favicon.svg", "#",
+                                                                true));
+                        }
 
                         if (companyInfoRepository.count() == 0) {
                                 companyInfoRepository.save(new CompanyInfo(

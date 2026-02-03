@@ -13,7 +13,8 @@ const AboutFounder = ({ title, companyInfo }) => {
                     <div className="relative">
                         <div className="absolute -top-4 -left-4 w-24 h-24 bg-accent/20 z-0"></div>
                         <img
-                            src={companyInfo.founderImageUrl || "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"}
+                            src={companyInfo.founderImageUrl || "https://ui-avatars.com/api/?name=House+of+Dreams&background=0f172a&color=eab308&size=512"}
+                            onError={(e) => { e.target.onerror = null; e.target.src = "https://ui-avatars.com/api/?name=House+of+Dreams&background=0f172a&color=eab308&size=512"; }}
                             alt={companyInfo.founderName}
                             className="relative z-10 w-full h-[500px] object-cover shadow-2xl grayscale hover:grayscale-0 transition duration-500"
                         />

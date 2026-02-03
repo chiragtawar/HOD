@@ -6,6 +6,7 @@ import FeaturedProperties from '../components/sections/FeaturedProperties';
 import PartnersSection from '../components/sections/PartnersSection';
 import AboutFounder from '../components/sections/AboutFounder';
 import CampaignCTA from '../components/sections/CampaignCTA';
+import RentalYieldEstimator from '../components/sections/RentalYieldEstimator';
 
 import config from '../config';
 
@@ -53,6 +54,8 @@ const Home = () => {
             case 'CallToAction':
             case 'CampaignModule':
                 return <CampaignCTA key={section.id} title={section.title} content={section.contentJson} />;
+            case 'RentalYieldEstimator':
+                return <RentalYieldEstimator key={section.id} title={section.title} content={section.contentJson} />;
             default:
                 return null;
         }

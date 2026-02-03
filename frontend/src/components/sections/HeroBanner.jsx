@@ -21,7 +21,7 @@ const HeroBanner = ({ content }) => {
                     dangerouslySetInnerHTML={{ __html: title || 'Buy, Sell & Invest in <br /><span class="text-accent">Verified Properties</span>' }}
                 />
                 <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">
-                    {subtitle || 'Turning Your Property Dreams into Reality. Exclusive listings in Faridabad, Noida & Gurgaon by Chirag, Deepak & Shivam.'}
+                    {subtitle || 'Turning Your Property Dreams into Reality. Exclusive listings in Faridabad, Noida & Gurgaon.'}
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                     <Link to={primaryBtnLink || "/contact"} className="bg-accent text-slate-900 px-8 py-4 rounded-none font-bold hover:bg-yellow-500 transition uppercase tracking-wider">

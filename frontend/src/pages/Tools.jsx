@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Calculator } from 'lucide-react';
+import StampDutyCalculator from '../components/calculators/StampDutyCalculator';
 
 const Tools = () => {
     const [propertyValue, setPropertyValue] = useState(5000000);
@@ -146,11 +147,9 @@ const Tools = () => {
                         <h3 className="font-bold text-lg mb-2">Rental Yield Estimator</h3>
                         <p className="text-sm text-gray-500">Calculate potential rental returns on your investment. (Coming Soon)</p>
                     </div>
-                    <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-100 opacity-75">
-                        <h3 className="font-bold text-lg mb-2">Stamp Duty Calculator</h3>
-                        <p className="text-sm text-gray-500">Estimate registration and stamp duty charges. (Coming Soon)</p>
-                    </div>
                 </div>
+
+                <StampDutyCalculator />
 
             </div>
         </div>
