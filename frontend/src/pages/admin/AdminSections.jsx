@@ -214,6 +214,19 @@ const AdminSections = () => {
                                     className="w-full border p-2 rounded h-24"
                                 />
                             </div>
+                            {editingSection.sectionKey === 'hero_section' && (
+                                <div>
+                                    <label className="block text-sm font-bold text-slate-700 mb-1">Founder Names (Optional)</label>
+                                    <input
+                                        type="text"
+                                        placeholder="e.g. Chirag, Deepak & Shivam"
+                                        value={contentForm.founderNames || ''}
+                                        onChange={(e) => handleContentChange('founderNames', e.target.value)}
+                                        className="w-full border p-2 rounded"
+                                    />
+                                    <p className="text-xs text-gray-500 mt-1">Appends "by [Names]" to the subtitle.</p>
+                                </div>
+                            )}
                             {editingSection.sectionKey === 'contact_cta' && (
                                 <div>
                                     <label className="block text-sm font-bold text-slate-700 mb-1">Button Text</label>

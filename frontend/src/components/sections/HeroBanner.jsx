@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const HeroBanner = ({ content }) => {
-    const { title, subtitle, backgroundImage, primaryBtnText, primaryBtnLink, secondaryBtnText, secondaryBtnLink } = JSON.parse(content || '{}');
+    const { title, subtitle, founderNames, backgroundImage, primaryBtnText, primaryBtnLink, secondaryBtnText, secondaryBtnLink } = JSON.parse(content || '{}');
 
     return (
         <section className="relative h-[600px] flex items-center">
@@ -22,6 +22,7 @@ const HeroBanner = ({ content }) => {
                 />
                 <p className="text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">
                     {subtitle || 'Turning Your Property Dreams into Reality. Exclusive listings in Faridabad, Noida & Gurgaon.'}
+                    {founderNames && ` by ${founderNames}.`}
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                     <Link to={primaryBtnLink || "/contact"} className="bg-accent text-slate-900 px-8 py-4 rounded-none font-bold hover:bg-yellow-500 transition uppercase tracking-wider">
