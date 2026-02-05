@@ -42,6 +42,9 @@ public class Property {
 
     private String imageUrl; // Placeholder for now
 
+    @Column(length = 1000)
+    private String amenities; // Comma separated list of amenities
+
     private Integer bedrooms;
     private Integer bathrooms;
     private Double areaSqFt;

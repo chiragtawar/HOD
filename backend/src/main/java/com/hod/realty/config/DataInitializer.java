@@ -121,6 +121,7 @@ public class DataInitializer {
                                                 null,
                                                 true, true, false, // isFeatured, isVisible, isLatestLaunch
                                                 "https://images.unsplash.com/photo-1613977257363-707ba9348227?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                                                "Swimming Pool,Gym,Park,24x7 Security",
                                                 4, 4, 3500.0, null));
 
                                 propertyRepository.save(new Property(null, 1L, "Modern Apartment in Neharpar",
@@ -129,6 +130,7 @@ public class DataInitializer {
                                                 "Resale", null,
                                                 false, true, false,
                                                 "https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                                                "Club House,Power Backup,Lift,Car Parking",
                                                 3, 3, 1800.0, null));
 
                                 propertyRepository.save(new Property(null, 1L, "Commercial Plot on Main Road",
@@ -137,6 +139,7 @@ public class DataInitializer {
                                                 null,
                                                 false, true, false,
                                                 "https://images.unsplash.com/photo-1500382017468-9049fed747ef?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                                                "Corner Plot,Main Road Facing,Water Connection",
                                                 0, 0, 250.0, null));
 
                                 propertyRepository.save(new Property(null, 1L, "BPTP Discovery Park 3BHK",
@@ -145,6 +148,7 @@ public class DataInitializer {
                                                 "BPTP",
                                                 true, true, true,
                                                 "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                                                "Gated Community,Tennis Court,Jogging Track",
                                                 3, 2, 1600.0, null));
 
                                 propertyRepository.save(new Property(null, 1L, "Omaxe World Street Shop",
@@ -153,6 +157,7 @@ public class DataInitializer {
                                                 "Omaxe",
                                                 false, true, true,
                                                 "https://images.unsplash.com/photo-1555529733-0e670560f7e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60",
+                                                "Fire Safety,CCTV,Public Washroom",
                                                 0, 0, 400.0, null));
                         }
 

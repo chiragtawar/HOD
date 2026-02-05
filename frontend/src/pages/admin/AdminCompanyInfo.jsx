@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { Save, Facebook, Instagram, Twitter, Linkedin } from 'lucide-react';
 import { authFetch } from '../../utils/auth';
+import { useSiteConfig } from '../../context/SiteConfigContext';
 
 const AdminCompanyInfo = () => {
+    const { refreshConfig } = useSiteConfig();
     const [info, setInfo] = useState({
         founderName: '',
         founderBio: '',
@@ -57,6 +59,7 @@ const AdminCompanyInfo = () => {
             .then(res => res.json())
             .then(data => {
                 setInfo(data);
+                refreshConfig(); // Refresh global site config (Header/Footer)
                 setMessage('Company info updated successfully!');
                 setTimeout(() => setMessage(''), 3000);
             })
