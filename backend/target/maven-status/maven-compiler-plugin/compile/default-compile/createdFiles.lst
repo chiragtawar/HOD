@@ -2,6 +2,7 @@ com/hod/realty/controller/PublicController.class
 com/hod/realty/repository/PropertyRepository.class
 com/hod/realty/config/TenantContext.class
 com/hod/realty/repository/PartnerRepository.class
+com/hod/realty/scheduler/KeepAliveScheduler.class
 com/hod/realty/PropertyApplication.class
 com/hod/realty/controller/LatestLaunchController.class
 com/hod/realty/repository/CompanyInfoRepository.class

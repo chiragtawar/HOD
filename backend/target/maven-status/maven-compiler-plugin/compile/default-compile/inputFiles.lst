@@ -24,4 +24,5 @@
 /Users/admin/Documents/hod-realty/backend/src/main/java/com/hod/realty/controller/LatestLaunchController.java
 /Users/admin/Documents/hod-realty/backend/src/main/java/com/hod/realty/config/SecurityConfig.java
 /Users/admin/Documents/hod-realty/backend/src/main/java/com/hod/realty/repository/SectionRepository.java
+/Users/admin/Documents/hod-realty/backend/src/main/java/com/hod/realty/scheduler/KeepAliveScheduler.java
 /Users/admin/Documents/hod-realty/backend/src/main/java/com/hod/realty/model/Counter.java
