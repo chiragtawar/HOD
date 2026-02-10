@@ -19,7 +19,17 @@ public class CompanyInfoController {
     @GetMapping
     public CompanyInfo getInfo() {
         Long tenantId = com.hod.realty.config.TenantContext.getTenantId();
-        return repository.findByTenantId(tenantId != null ? tenantId : 1L).orElse(new CompanyInfo());
+        return repository.findByTenantId(tenantId != null ? tenantId : 1L).orElseGet(() -> {
+            CompanyInfo defaultInfo = new CompanyInfo();
+            defaultInfo.setTenantId(1L);
+            defaultInfo.setFounderName("House of Dreams Realty");
+            defaultInfo.setFounderBio("Helping you find your dream home.");
+            defaultInfo.setAddress("Noida, India");
+            defaultInfo.setPhone("+91 9999999999");
+            defaultInfo.setEmail("info@houseofdreamsrealty.in");
+            defaultInfo.setVisible(true);
+            return defaultInfo;
+        });
     }
 
     @PostMapping
